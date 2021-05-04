@@ -12,15 +12,17 @@
     <img src="images/logo.svg" class="mainlogo">
     <div class="title">
       <h1><span style="color:hsl(0, 0%, 59%); font-weight: 300;">We are launching</span> soon!</h1>
-      <p>Subscribe and get notified</p>
+      <p class="titleText">Subscribe and get notified</p>
     </div>
-    <div>
-      <input type="text" class="inputForEmail" placeholder="Your email address...">
-      <button class="notify" onclick="checkField();">Notify Me</button>
-      <p class="cautionText">Please provide a valid email address</p>
-    </div>
+    <div class="inputButton">
+      <div>
+        <input type="text" class="inputForEmail" placeholder="Your email address..."> 
+        <p class="cautionText">Please provide a valid email address</p>
+      </div>
+      <button class="notify" onclick="checkField();">Notify Me</button> 
+    </div>    
     <img src="images/illustration-dashboard.png" class="mainImg">
-    <div class="forIcons">
+    <div>
       <ion-icon name="logo-facebook" class="icon"></ion-icon>
       <ion-icon name="logo-twitter" class="icon"></ion-icon>
       <ion-icon name="logo-instagram" class="icon"></ion-icon>
@@ -36,7 +38,6 @@
     let cautionText = document.querySelector(".cautionText");
     const regularExpression = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
     if(regularExpression.test(inputFieldValue)){
-      alert("Thanks for email!");
       inputField.style.border = "1px solid hsl(223, 100%, 88%)";
       cautionText.style.display = "none";
     }else{
