@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+body{
+    font-family: Libre Franklin;
+    font-size: 20px;
+    color: hsl(209, 33%, 12%);
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.mainlogo{
+    width:90px;
+}
+
+.title{
+    text-align: center;
+}
+
+.inputForEmail{
+
+}
+
+.notify{
+    
+}
+
+.mainImg{
+    width: 600px;
+    margin: 4em 0;
+}
+
+.forIcons{
+    margin-bottom: 1em;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+}
