@@ -16,7 +16,8 @@
     </div>
     <div>
       <input type="text" class="inputForEmail" placeholder="Your email address...">
-      <button class="notify">Notify Me</button>
+      <button class="notify" onclick="checkField();">Notify Me</button>
+      <p class="cautionText">Please provide a valid email address</p>
     </div>
     <img src="images/illustration-dashboard.png" class="mainImg">
     <div class="forIcons">
@@ -28,4 +29,19 @@
   </div>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
+<script>
+  function checkField(){
+    let inputFieldValue = document.querySelector(".inputForEmail").value;
+    let inputField = document.querySelector(".inputForEmail");
+    let cautionText = document.querySelector(".cautionText");
+    if(inputFieldValue !== 'test@gmail.com'){
+      inputField.style.border = "1px solid hsl(354, 100%, 66%)";
+      cautionText.style.display = "block";
+    }else{
+      alert("Thanks for email!");
+      inputField.style.border = "1px solid hsl(223, 100%, 88%)";
+      cautionText.style.display = "none";
+    }
+  }
+</script>
 </html>
